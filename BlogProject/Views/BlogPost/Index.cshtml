@@ -1,0 +1,46 @@
+﻿@model List<AuthSystem.Models.BlogPost>
+@using Microsoft.AspNetCore.Identity
+@using AuthSystem.Areas.Identity.Data
+
+@inject UserManager<ApplicationUser> UserManager
+
+<h2>Blog Posts</h2>
+
+<p>
+    <a asp-action="Create" asp-controller="BlogPost">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Published
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-controller="BlogPost" asp-route-id="@item.PostId">Details</a>
+                    @if (item.UserId == UserManager.GetUserId(User))
+                    {
+                        <a asp-action="Edit" asp-controller="BlogPost" asp-route-id="@item.PostId">Edit</a>
+                        <a asp-action="Delete" asp-controller="BlogPost" asp-route-id="@item.PostId">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

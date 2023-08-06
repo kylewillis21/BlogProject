@@ -1,0 +1,18 @@
+﻿using AuthSystem.Areas.Identity.Data;
+using System.ComponentModel.DataAnnotations;
+
+namespace AuthSystem.Models
+{
+    public class BlogPost
+    {
+        [Key]
+        public int PostId { get; set; }
+        public string PostTitle { get; set; }
+        public string Content { get; set; }
+        public DateTime CreatedAt { get; set; }
+
+
+        public string UserId { get; set; } // Foreign Key
+        public ApplicationUser User { get; set; }
+    }
+}
