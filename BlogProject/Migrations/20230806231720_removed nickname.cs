@@ -5,7 +5,7 @@
 namespace AuthSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class Blogpostsadded : Migration
+    public partial class removednickname : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

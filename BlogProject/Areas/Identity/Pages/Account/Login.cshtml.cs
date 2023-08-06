@@ -111,11 +111,12 @@ namespace AuthSystem.Areas.Identity.Pages.Account
             returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-
+            _logger.LogInformation("WE GOT HEREEEEEEEEEEEEEEEEEEEEEEEEEE");
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                _logger.LogInformation("ModelState is valid");
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
@@ -133,11 +134,12 @@ namespace AuthSystem.Areas.Identity.Pages.Account
                 }
                 else
                 {
+                    _logger.LogInformation("Invalid login attempt");
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                     return Page();
                 }
             }
-
+            _logger.LogInformation("Model State is invalid");
             // If we got this far, something failed, redisplay form
             return Page();
         }

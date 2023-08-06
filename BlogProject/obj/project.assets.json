@@ -11752,11 +11752,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kdub9\\Documents\\My Web Sites\\AuthSystem\\AuthSystem.csproj",
+      "projectUniqueName": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\AuthSystem.csproj",
       "projectName": "AuthSystem",
-      "projectPath": "C:\\Users\\kdub9\\Documents\\My Web Sites\\AuthSystem\\AuthSystem.csproj",
+      "projectPath": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\AuthSystem.csproj",
       "packagesPath": "C:\\Users\\kdub9\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kdub9\\Documents\\My Web Sites\\AuthSystem\\obj\\",
+      "outputPath": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

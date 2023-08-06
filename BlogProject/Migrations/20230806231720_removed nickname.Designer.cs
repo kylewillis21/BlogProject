@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AuthSystem.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20230803162731_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230806231720_removed nickname")]
+    partial class removednickname
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -98,7 +98,7 @@ namespace AuthSystem.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("AuthSystem.Models.Post", b =>
+            modelBuilder.Entity("AuthSystem.Models.BlogPost", b =>
                 {
                     b.Property<int>("PostId")
                         .ValueGeneratedOnAdd()
@@ -265,7 +265,7 @@ namespace AuthSystem.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("AuthSystem.Models.Post", b =>
+            modelBuilder.Entity("AuthSystem.Models.BlogPost", b =>
                 {
                     b.HasOne("AuthSystem.Areas.Identity.Data.ApplicationUser", "User")
                         .WithMany("Posts")

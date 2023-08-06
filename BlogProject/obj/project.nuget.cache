@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5lVaM/1BE7kEbh60b5gwIIzss45Tod6kF/C52T/zviYsXDE6eqAJTRu+nenfhrSNcAFGUadO/qjXmJKOVKU2SQ==",
+  "dgSpecHash": "8yyJJSodCPcQ2P0w1EYbYvftTeOkCBSIGuL0/7NJyJJl/pEXNJbfvHH7eQ/oN4WjYR+6p+2XxgGlTZ1rigLNRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kdub9\\Documents\\My Web Sites\\AuthSystem\\AuthSystem.csproj",
+  "projectFilePath": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\AuthSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kdub9\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\kdub9\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
