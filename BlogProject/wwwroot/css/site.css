@@ -45,3 +45,21 @@ body {
 .login-logout-card .card-body {
     padding: 10px 20px;
 }
+
+.content-textarea {
+    height: 150px;
+    vertical-align: top;
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    text-anchor: start;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.title-textarea {
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    text-anchor: start;
+}
