@@ -4,7 +4,7 @@
 
 @inject UserManager<ApplicationUser> UserManager
 
-<h2>Blog Posts</h2>
+<h2>Posts</h2>
 
 <p>
     <a asp-action="Create" asp-controller="BlogPost">Create New</a>
@@ -27,13 +27,12 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.PostTitle)
+                    <a asp-action="Details" asp-controller="BlogPost" asp-route-id="@item.PostId">@Html.DisplayFor(modelItem => item.PostTitle)</a>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.CreatedAt)
                 </td>
                 <td>
-                    <a asp-action="Details" asp-controller="BlogPost" asp-route-id="@item.PostId">Details</a>
                     @if (item.UserId == UserManager.GetUserId(User))
                     {
                         <a asp-action="Edit" asp-controller="BlogPost" asp-route-id="@item.PostId">Edit</a>
