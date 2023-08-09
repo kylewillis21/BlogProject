@@ -46,6 +46,7 @@ namespace AuthSystem.Controllers
 
             var blogPost = _context.Posts
                 .Include(p => p.Comments)
+                .ThenInclude(c => c.User)
                 .FirstOrDefault(p => p.PostId == id);
 
             if (blogPost == null)

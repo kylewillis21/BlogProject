@@ -36,7 +36,7 @@
     <input type="hidden" name="postId" value="@Model.PostId" />
     <div class="form-group">
         <label for="content">Add Comment:</label>
-        <textarea name="content" class="form-control" rows="3" required></textarea>
+        <textarea name="content" class="form-control" rows="1" required></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Add Comment</button>
 </form>
@@ -44,6 +44,6 @@
 {
     <div class="comment">
         <p>@comment.Content</p>
-        @*<small>Posted by: @comment.User.UserName</small>*@
+        <small>Posted by: @comment.User.FirstName</small>
     </div>
 }
