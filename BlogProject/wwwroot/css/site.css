@@ -261,3 +261,12 @@ html {
 }
 /*end details page*/
 
+/* Comments */
+.comment {
+    border: 1px solid #212531;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+/* End Comments */

@@ -14,6 +14,7 @@ public class AuthDbContext : IdentityDbContext<ApplicationUser>
     }
 
     public DbSet<BlogPost> Posts { get; set; }
+    public DbSet<Comment> Comments { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -26,6 +27,16 @@ public class AuthDbContext : IdentityDbContext<ApplicationUser>
             .WithMany(u => u.Posts)
             .HasForeignKey(p => p.UserId)
             .OnDelete(DeleteBehavior.Restrict);
+
+        builder.Entity<Comment>()
+            .HasOne(c => c.Post)
+            .WithMany(c => c.Comments)
+            .HasForeignKey(c => c.PostId);
+
+        builder.Entity<Comment>()
+            .HasOne(c => c.User)
+            .WithMany(c => c.Comments)
+            .HasForeignKey(c => c.UserId);
     }
 
 }
