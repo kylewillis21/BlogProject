@@ -32,3 +32,18 @@
     }
     <a asp-action="Index">Back to List</a>
 </div>
+<form asp-controller="Comment" asp-action="Create" method="post">
+    <input type="hidden" name="postId" value="@Model.PostId" />
+    <div class="form-group">
+        <label for="content">Add Comment:</label>
+        <textarea name="content" class="form-control" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Comment</button>
+</form>
+@foreach (var comment in Model.Comments)
+{
+    <div class="comment">
+        <p>@comment.Content</p>
+        @*<small>Posted by: @comment.User.UserName</small>*@
+    </div>
+}

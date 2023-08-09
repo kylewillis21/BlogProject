@@ -37,14 +37,16 @@ namespace AuthSystem.Controllers
         }
 
         // GET: BlogPost/Details/5
-        public IActionResult Details(int? id)
+        public async Task<IActionResult> Details(int? id)
         {
             if(id == null)
             {
                 return NotFound();
             }
 
-            var blogPost = _context.Posts.FirstOrDefault(p => p.PostId == id);
+            var blogPost = _context.Posts
+                .Include(p => p.Comments)
+                .FirstOrDefault(p => p.PostId == id);
 
             if (blogPost == null)
             {
