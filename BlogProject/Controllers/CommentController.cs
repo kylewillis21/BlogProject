@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Framework;
 using AuthSystem.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace AuthSystem.Controllers
 {
@@ -42,8 +43,6 @@ namespace AuthSystem.Controllers
             }
             // This will hit if the model state is invalid and no comment will be posted
             return RedirectToAction("Details", "BlogPost", new { id = postId });
-
         }
-
     }
 }
