@@ -24,10 +24,24 @@ namespace AuthSystem.Controllers
         /// </summary>
         
         // GET: BlogPost
-        public IActionResult Index()
+        public IActionResult Index(string? id)
         {
-            var blogPosts = _context.Posts.ToList();
-            return View(blogPosts);
+            if (id == null)
+            {
+                var blogPosts = _context.Posts
+                    .Include(p => p.User)
+                    .ToList();
+                return View(blogPosts);
+            }
+            else
+            {
+                var blogPosts = _context.Posts
+                    .Include(p => p.User)
+                    .Where(p => p.UserId == id)
+                    .ToList();
+                return View(blogPosts);
+            }
+            
         }
 
         public IActionResult MyIndex()

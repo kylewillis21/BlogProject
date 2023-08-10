@@ -27,7 +27,7 @@
                         <a asp-area="" asp-controller="BlogPost" asp-action="Index">BlogProject</a>
                     </div>
                 </div>
-                <li><a asp-controller="BlogPost" asp-action="Index" asp-area="">Home</a></li>
+                <li><a asp-controller="BlogPost" asp-action="Index" asp-route-id="" asp-area="">Home</a></li>
                 <li><a asp-controller="BlogPost" asp-action="MyIndex" asp-area="">My Posts</a></li>
                 <li><a asp-area="" asp-controller="BlogPost" asp-action="Create">New Post</a></li>
                 @if (SignInManager.IsSignedIn(User))
