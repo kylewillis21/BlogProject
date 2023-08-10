@@ -19,6 +19,9 @@
             <th>
                 Published
             </th>
+            <th>
+                Last Updated
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -31,6 +34,12 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @if (item.UpdatedAt != null)
+                    {
+                        @Html.DisplayFor(modelItem => item.UpdatedAt)
+                    }
                 </td>
                 <td>
                     @if (item.UserId == UserManager.GetUserId(User))

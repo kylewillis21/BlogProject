@@ -141,6 +141,7 @@ namespace AuthSystem.Controllers
                 return Forbid();
             }
 
+            originalBlogPost.UpdatedAt = DateTime.Now;
             originalBlogPost.PostTitle = blogPost.PostTitle;
             originalBlogPost.Content = blogPost.Content;
 
