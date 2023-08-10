@@ -23,11 +23,20 @@
                     @Html.DisplayFor(model => model.Content)
                 </dd>
                 <dt class="col-sm-10">
-                    Posted
+                    Originally Posted
                 </dt>
                 <dd class="col-sm-6">
                     @Html.DisplayFor(model => model.CreatedAt)
                 </dd>
+                @if (Model.UpdatedAt != null)
+                {
+                    <dt class="col-sm-10">
+                        Updated Last
+                    </dt>
+                    <dd class="col-sm-6">
+                        @Html.DisplayFor(model => model.UpdatedAt)
+                    </dd>
+                }
             </dl>
             <div>
                 @if (Model.UserId == UserManager.GetUserId(User))
