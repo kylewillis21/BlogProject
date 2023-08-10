@@ -71,7 +71,8 @@ html {
 
 #wrapper.toggled #page-content-wrapper {
     position:absolute;
-    margin-right: -220px
+    /*margin-right: -220px*/
+    right: 0;
 }
 
 /* Sidebar nav styles */
@@ -267,6 +268,28 @@ html {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-content {
+    width: 65%;
+}
+
+.comments {
+    width: 30%;
+}
+
+.comment-container {
+    height: 75%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
     border-radius: 10px;
 }
 /* End Comments */

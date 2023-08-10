@@ -9,41 +9,65 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@Html.DisplayFor(model => model.PostTitle)</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="post-title">@Html.DisplayFor(model => model.PostTitle)</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <hr />
+            <dl class="row">
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Content)
+                </dd>
+                <dt class="col-sm-10">
+                    Posted
+                </dt>
+                <dd class="col-sm-6">
+                    @Html.DisplayFor(model => model.CreatedAt)
+                </dd>
+            </dl>
+            <div>
+                @if (Model.UserId == UserManager.GetUserId(User))
+                {
+                    <a asp-action="Edit" asp-route-id="@Model?.PostId">Edit</a>
+                }
+                <a asp-action="Index">Back to List</a>
+            </div>
+            <form asp-controller="Comment" asp-action="Create" method="post">
+                <input type="hidden" name="postId" value="@Model.PostId" />
+                <div class="form-group">
+                    <label for="content">Add Comment:</label>
+                    <textarea name="content" class="form-control" rows="1" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Comment</button>
+            </form>
+        </div>
+        
+        
+        <div class="col-lg-6">
+            <h3>Comments</h3>
+            <div class="comment-container">
+                @if (Model.Comments.Count > 0)
+                {
+                    @foreach (var comment in Model.Comments)
+                    {
+                        <div class="comment">
+                            <p>@comment.Content</p>
+                            <small>Posted by: @comment.User.FirstName</small>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div>
+                        <p>No Comments Yet!</p>
+                    </div>
+                }
 
-<div>
-    <hr />
-    <dl class="row">
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-        <dt class = "col-sm-10">
-            Posted
-        </dt>
-        <dd class = "col-sm-6">
-            @Html.DisplayFor(model => model.CreatedAt)
-        </dd>
-    </dl>
-</div>
-<div>
-    @if (Model.UserId == UserManager.GetUserId(User))
-    {
-        <a asp-action="Edit" asp-route-id="@Model?.PostId">Edit</a>
-    }
-    <a asp-action="Index">Back to List</a>
-</div>
-<form asp-controller="Comment" asp-action="Create" method="post">
-    <input type="hidden" name="postId" value="@Model.PostId" />
-    <div class="form-group">
-        <label for="content">Add Comment:</label>
-        <textarea name="content" class="form-control" rows="1" required></textarea>
+            </div>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Add Comment</button>
-</form>
-@foreach (var comment in Model.Comments)
-{
-    <div class="comment">
-        <p>@comment.Content</p>
-        <small>Posted by: @comment.User.FirstName</small>
-    </div>
-}
+</div>
