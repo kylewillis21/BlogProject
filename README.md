@@ -14,7 +14,10 @@ As of right now, this project is not ready for deployment but if you want to try
 2. Clone the repository (git clone https://github.com/kylewillis21/BlogProject.git)
 3. Download the dependencies using NuGet Package Manager on Visual Studio
 4. Create the database using the Package Manager Console inside of Visual Studio
-   (Tools > NuGet Package Manager > Package Manager Console) using the command <mark>update-database</mark>
+   (Tools > NuGet Package Manager > Package Manager Console) using the command
+   ```bash
+   update-database
+   ```
 6. Build and Run the solution to run a local version of the website
    
 *Due to this being a local solution the only data coming from it will be data that you create as a user*
