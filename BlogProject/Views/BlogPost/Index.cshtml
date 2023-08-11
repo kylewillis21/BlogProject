@@ -17,6 +17,9 @@
                 Title
             </th>
             <th>
+                User
+            </th>
+            <th>
                 Published
             </th>
             <th>
@@ -31,6 +34,9 @@
             <tr>
                 <td>
                     <a asp-action="Details" asp-controller="BlogPost" asp-route-id="@item.PostId">@Html.DisplayFor(modelItem => item.PostTitle)</a>
+                </td>
+                <td>
+                    <a asp-action="Index" asp-controller="BlogPost" asp-route-id="@item.UserId">@Html.DisplayFor(modelItem => item.User.FirstName) @Html.DisplayFor(modelItem => item.User.LastName)</a>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.CreatedAt)
