@@ -44,12 +44,6 @@ namespace AuthSystem.Controllers
             
         }
 
-        public IActionResult MyIndex()
-        {
-            var blogPosts = _context.Posts.Where(p => p.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier)).ToList();
-            return View(blogPosts);
-        }
-
         // GET: BlogPost/Details/5
         public async Task<IActionResult> Details(int? id)
         {

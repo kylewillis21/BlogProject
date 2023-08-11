@@ -522,3 +522,4 @@ C:\Users\kdub9\Documents\My Web Sites\BlogProject\BlogProject\obj\Debug\net7.0\r
 C:\Users\kdub9\Documents\My Web Sites\BlogProject\BlogProject\obj\Debug\net7.0\AuthSystem.pdb
 C:\Users\kdub9\Documents\My Web Sites\BlogProject\BlogProject\obj\Debug\net7.0\AuthSystem.genruntimeconfig.cache
 C:\Users\kdub9\Documents\My Web Sites\BlogProject\BlogProject\obj\Debug\net7.0\ref\AuthSystem.dll
+C:\Users\kdub9\Documents\My Web Sites\BlogProject\BlogProject\obj\Debug\net7.0\scopedcss\Views\BlogPost\Details.cshtml.rz.scp.css
