@@ -81,6 +81,11 @@ namespace AuthSystem.Areas.Identity.Pages.Account
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Nickname")]
+            public string Nickname { get; set; }
+
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -132,7 +137,7 @@ namespace AuthSystem.Areas.Identity.Pages.Account
                 // new
                 user.FirstName = Input.FirstName;
                 user.LastName = Input.LastName;
-                user.LockoutEnabled = false;
+                user.Nickname = Input.Nickname;
 
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);

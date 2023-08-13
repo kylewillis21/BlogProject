@@ -245,6 +245,18 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\wwwroot\\uploads\\62e82747-92a7-4b95-98b8-07141a144328.jpg",
+      "PackagePath": "staticwebassets\\uploads\\62e82747-92a7-4b95-98b8-07141a144328.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\wwwroot\\uploads\\b5366c5b-b114-47c0-a3fe-477fae1a31e4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b5366c5b-b114-47c0-a3fe-477fae1a31e4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\wwwroot\\uploads\\c4d284ec-9e52-4d59-84af-bfbb3b5a88f5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c4d284ec-9e52-4d59-84af-bfbb3b5a88f5.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.AuthSystem.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -19,6 +19,14 @@ public class ApplicationUser : IdentityUser
     [Column(TypeName = "nvarchar(100)")]
     public string LastName { get; set; }
 
+    [PersonalData]
+    [Column(TypeName = "nvarchar(100)")]
+    public string Nickname { get; set; }
+
+    [PersonalData]
+    [Column(TypeName = "nvarchar(250)")]
+    public string? ProfilePicturePath { get; set; }
+
     public ICollection<BlogPost> Posts { get; set; }
 
     public ICollection<Comment> Comments { get; set; } 

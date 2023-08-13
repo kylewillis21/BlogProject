@@ -23,7 +23,11 @@
                 <label asp-for="Input.LastName">Last Name</label>
             </div>
         </div>
-
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Input.Nickname" class="form-control" autocomplete="nickname" aria-required="true" placeholder="nickname" />
+        <label asp-for="Input.Nickname">Nickname</label>
+        <span asp-validation-for="Input.Nickname" class="text-danger"></span>
     </div>
     <div class="form-floating mb-3">
         <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />

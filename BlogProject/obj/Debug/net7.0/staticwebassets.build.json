@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ub2wKJRnLxH3Eus+uYfW/kCEVtSVrzHzNEX3PDD62I8=",
+  "Hash": "M9LK8Am/uaBFu2TCY8HoLXnmwAVJ8HVQ5ygJy0ZMu3w=",
   "Source": "AuthSystem",
   "BasePath": "_content/AuthSystem",
   "Mode": "Default",
@@ -2089,6 +2089,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\wwwroot\\uploads\\62e82747-92a7-4b95-98b8-07141a144328.jpg",
+      "SourceId": "AuthSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\wwwroot\\",
+      "BasePath": "_content/AuthSystem",
+      "RelativePath": "uploads/62e82747-92a7-4b95-98b8-07141a144328.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\62e82747-92a7-4b95-98b8-07141a144328.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\wwwroot\\uploads\\b5366c5b-b114-47c0-a3fe-477fae1a31e4.jpg",
+      "SourceId": "AuthSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\wwwroot\\",
+      "BasePath": "_content/AuthSystem",
+      "RelativePath": "uploads/b5366c5b-b114-47c0-a3fe-477fae1a31e4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b5366c5b-b114-47c0-a3fe-477fae1a31e4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\wwwroot\\uploads\\c4d284ec-9e52-4d59-84af-bfbb3b5a88f5.jpg",
+      "SourceId": "AuthSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kdub9\\Documents\\My Web Sites\\BlogProject\\BlogProject\\wwwroot\\",
+      "BasePath": "_content/AuthSystem",
+      "RelativePath": "uploads/c4d284ec-9e52-4d59-84af-bfbb3b5a88f5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\c4d284ec-9e52-4d59-84af-bfbb3b5a88f5.jpg"
     }
   ]
 }
