@@ -1,0 +1,51 @@
+﻿@model ApplicationUser
+@using Microsoft.AspNetCore.Identity
+
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Edit Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit Profile</h1>
+
+@using (Html.BeginForm("UpdateProfile", "UserProfile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="ProfilePicture">Profile Picture</label>
+        <input type="file" name="profilePicture" class="form-control-file">
+        @Html.ValidationMessageFor(model => model.ProfilePicturePath, "", new { @class = "text-danger" })
+    </div>    
+
+    <div class="form-group">
+        <label for="FirstName">First Name</label>
+        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="LastName">Last Name</label>
+        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+    </div>
+
+    @Html.HiddenFor(model => model.Nickname);
+    @Html.HiddenFor(model => model.Comments);
+    @Html.HiddenFor(model => model.Posts);
+
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+}
+
+<div>
+    <a asp-action="Profile" asp-controller="UserProfile" asp-route-id="@UserManager.GetUserId(User)">Back to Profile</a>
+</div>

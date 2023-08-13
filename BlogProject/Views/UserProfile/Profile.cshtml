@@ -1,0 +1,24 @@
+﻿@model ApplicationUser
+@using Microsoft.AspNetCore.Identity
+@using AuthSystem.Areas.Identity.Data
+
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (!string.IsNullOrEmpty(Model.ProfilePicturePath))
+{
+    <img src="~/uploads/@Model.ProfilePicturePath" alt="Profile Picture" />
+}
+<h1>@Model.Nickname</h1>
+@if (Model.Id == UserManager.GetUserId(User))
+{
+    <h6><a asp-action="EditProfile" asp-controller="UserProfile">Edit Profile</a></h6>
+}
+<div>
+    <p><strong>First Name:</strong> @Model.FirstName</p>
+    <p><strong>Last Name:</strong> @Model.LastName</p>
+</div>
